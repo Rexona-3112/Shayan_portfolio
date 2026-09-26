@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shayan Chakraborty | Digital Forensics · Cybersecurity</title>
+    
+    <!-- Meta Description & SEO -->
+    <meta name="description" content="Portfolio of Shayan Chakraborty — Forensic Science postgraduate focused on Digital Forensics, Cybersecurity, Cybercrime Investigation and Forensic Research.">
+    <meta name="author" content="Shayan Chakraborty">
+    <meta name="keywords" content="Shayan Chakraborty, Digital Forensics, Cybersecurity, Forensic Science, Cybercrime Investigation, Incident Response, Vulnerability Assessment, SFSL Cyber Division">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Shayan Chakraborty | Digital Forensics · Cybersecurity">
+    <meta property="og:description" content="Portfolio of Shayan Chakraborty — Forensic Science postgraduate focused on Digital Forensics, Cybersecurity, Cybercrime Investigation and Forensic Research.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="favicon.svg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Shayan Chakraborty | Digital Forensics · Cybersecurity">
+    <meta name="twitter:description" content="Portfolio of Shayan Chakraborty — Forensic Science postgraduate focused on Digital Forensics, Cybersecurity, Cybercrime Investigation and Forensic Research.">
+    <meta name="twitter:image" content="favicon.svg">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Shayan Chakraborty",
+      "jobTitle": "Forensic Science Postgraduate | Digital Forensics | Cybersecurity",
+      "description": "Forensic Science postgraduate working across Digital Forensics, Cybersecurity, Cybercrime Investigation and Forensic Research.",
+      "url": "https://github.com/Rexona-3112",
+      "sameAs": [
+        "https://github.com/Rexona-3112"
+      ],
+      "knowsAbout": [
+        "Digital Forensics",
+        "Cybersecurity",
+        "Cybercrime Investigation",
+        "Forensic Investigation",
+        "Incident Response",
+        "Forensic Science",
+        "Vulnerability Assessment",
+        "Digital Evidence Handling",
+        "FTK Imager",
+        "Wireshark",
+        "Nmap"
+      ]
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Typography: Space Mono from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Brutalist Terminal Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="noise-bg">
+
+    <!-- ══════════════════════════════════════
+         NAVIGATION BAR
+    ══════════════════════════════════════ -->
+    <nav class="sticky top-0 z-50 bg-[#f3f4ef] py-4 border-b-4 border-black mb-25 flex justify-between items-center max-w-7xl mx-auto">
+        <a href="#hero" class="text-xl md:text-2xl font-bold tracking-tighter flex items-center gap-2 text-black hover:opacity-90 transition" aria-label="Scroll to top / hero section">
+            <span class="bg-black text-white px-2 py-1 text-sm md:text-base">ROOT</span>
+            <span>~/shayan.c<span class="cursor-blink text-green-600">_</span></span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex gap-6 font-bold text-sm">
+            <a href="#about" class="hover:underline decoration-2 underline-offset-4">./about</a>
+            <a href="#projects" class="hover:underline decoration-2 underline-offset-4 text-blue-700">./projects/</a>
+            <a href="#experience" class="hover:underline decoration-2 underline-offset-4">./experience</a>
+            <a href="#research" class="hover:underline decoration-2 underline-offset-4 text-green-700">./research/</a>
+            <a href="#skills" class="hover:underline decoration-2 underline-offset-4">./skills/</a>
+            <a href="#certifications" class="hover:underline decoration-2 underline-offset-4 text-purple-700">./certifications/</a>
+            <a href="#contact" class="hover:underline decoration-2 underline-offset-4 text-orange-600">./contact</a>
+        </div>
+         <div class="flex items-center gap-3">
+            <a href="#contact" class="hidden md:inline-block bg-yellow-400 text-black px-4 py-2 font-bold brutal-border brutal-btn text-xs md:text-sm">
+                [ CONTACT_ME ]
+            </a>
+            <!-- Hamburger Menu Button -->
+            <button id="hamburger" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="block w-6 h-0.5 bg-black"></span>
+                <span class="block w-6 h-0.5 bg-black"></span>
+                <span class="block w-6 h-0.5 bg-black"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-72 bg-[#f3f4ef] z-50 border-l-4 border-black p-8 flex flex-col gap-6 md:hidden">
+        <button id="close-menu" class="self-end text-2xl font-bold" aria-label="Close navigation menu">✕</button>
+        <a href="#about" onclick="closeMobileMenu()" class="text-xl font-bold hover:underline">./about</a>
+        <a href="#projects" onclick="closeMobileMenu()" class="text-xl font-bold hover:underline text-blue-700">./projects/</a>
+        <a href="#experience" onclick="closeMobileMenu()" class="text-xl font-bold hover:underline">./experience</a>
+        <a href="#research" onclick="closeMobileMenu()" class="text-xl font-bold hover:underline text-green-700">./research/</a>
+        <a href="#skills" onclick="closeMobileMenu()" class="text-xl font-bold hover:underline">./skills/</a>
+        <a href="#certifications" onclick="closeMobileMenu()" class="text-xl font-bold hover:underline text-purple-700">./certifications/</a>
+        <a href="#contact" onclick="closeMobileMenu()" class="text-xl font-bold hover:underline text-orange-600">./contact</a>
+        <a href="#contact" onclick="closeMobileMenu()" class="bg-yellow-400 text-black px-4 py-3 font-bold brutal-border text-center text-sm mt-4">
+            [ CONTACT_ME ]
+        </a>
+    </div>
+    <div id="menu-overlay" class="fixed inset-0 bg-black/40 z-40 hidden md:hidden" onclick="closeMobileMenu()"></div>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto">
+
+        <!-- ══════════════════════════════════════
+             HERO SECTION
+        ══════════════════════════════════════ -->
+          
+        <header id="hero" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 fade-in pt-4">
+            <div>
+                <!-- Status Badges -->
+                <div class="flex flex-wrap items-center gap-2 mb-4">
+                    <span class="inline-flex items-center gap-2 bg-orange-200 border-2 border-black px-3 py-1 font-bold text-xs">
+                        <span class="relative inline-block w-2 h-2 rounded-full bg-green-500 ping-dot"></span>
+                        STATUS: FORENSIC RESEARCH &amp; OPS
+                    </span>
+                    <span class="inline-flex items-center gap-6 bg-black text-white border-6 border-black px-3 py-1 font-bold text-xs" aria-label="Intern at SFSL Cyber Division">
+                    ● SFSL CYBER DIVISION INTERN '26
+                    </span>
+                </div>
+                <!-- Headline -->
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-none whitespace-nowrap">
+                    Investigate<span class="text-green-500"> Digital Evidence<br></span>
+                    <span class="text-gray-500">to understand</span><br>
+                    <span class="underline decoration-wavy decoration-orange-500">what happened.</span>
+                </h1>
+
+                <!-- Typewriter Role Line -->
+                <p class="text-base md:text-lg text-gray-700 font-mono mb-4 h-7">
+                    &gt; <span id="typed-role"></span>
+                </p>
+            
+                <!-- Subheadline -->
+                <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+                    Forensic Science postgraduate working across <strong>Digital Forensics</strong>, <strong>Cybersecurity</strong>, and <strong>Cybercrime Investigation</strong>.
+                </p>
+                <!-- Action Buttons -->
+                <div class="flex flex-col md:flex-row gap-4 mb-10">
+                    <a href="#projects" class="bg-black text-white px-6 py-3 font-bold brutal-border brutal-btn hover:bg-gray-800 transition text-center align-items-center" aria-label="View Shayan Chakraborty's projects">
+                        [ VIEW PROJECTS → ]
+                    </a>
+                    <a href="https://www.linkedin.com/in/shayan-chakraborty" target="_blank" rel="noopener noreferrer" class="bg-black-600 text-black border-2 border-blue-600 px-6 py-3 font-bold brutal-border brutal-btn hover:bg-blue-700 transition text-center" aria-label="View Shayan Chakraborty's LinkedIn profile">
+                        [ VIEW LINKEDIN ]
+                    </a>
+                </div>
+           
+                <!-- Truthful Defensible Stats Strip -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 border-t-2 border-black pt-6 align-center text-center">
+                    <div>
+                        <div class="text-3xl font-bold stat-val align-center">01<span class="text-orange-500">+</span></div>
+                        <div class="text-xs text-gray-600 mt-1 font-bold">Laboratory Internship</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold stat-val align-center">07<span class="text-orange-500">+</span></div>
+                        <div class="text-xs text-gray-600 mt-1 font-bold">Forensic &amp; Sec Projects</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold stat-val align-center">09<span class="text-orange-500">+</span></div>
+                        <div class="text-xs text-gray-600 mt-1 font-bold">Certifications &amp; Sims</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold stat-val align-center">06<span class="text-orange-500">+</span></div>
+                        <div class="text-xs text-gray-600 mt-1 font-bold">Research Inquiries</div>
+                    </div>
+                </div>
+            </div>
+     <!-- Terminal Window Component (Interactive) -->
+                <div class="bg-gray-900 rounded-lg brutal-border overflow-hidden shadow-2xl scanlines align-items-center" id="terminal-shell">
+                <div class="bg-gray-800 p-2 flex items-center gap-2 border-b border-gray-700">
+                    <div class="terminal-dot bg-red-mac"></div>
+                    <div class="terminal-dot bg-yellow-mac"></div>
+                    <div class="terminal-dot bg-green-mac"></div>
+                    <span class="ml-3 text-gray-400 text-xs font-mono">shayan@forensic-lab: ~/investigation</span>
+                    <span class="ml-auto text-gray-400 text-[10px] font-mono hidden sm:inline">type <span class="text-orange-400 font-bold">help</span></span>
+                </div>
+                <div class="p-6 font-mono text-xs md:text-sm h-72 overflow-y-auto scrollbar-hide bg-gray-900 leading-relaxed text-white" id="terminal-content"></div>
+            </div>
+        </header>
+
+        <!-- ══════════════════════════════════════
+             ABOUT / PROFILE SECTION
+        ══════════════════════════════════════ -->
+        <section id="about" class="mb-28 pt-8 fade-in">
+            <div class="flex items-baseline justify-between mb-8 border-b-2 border-black pb-4">
+                <h2 class="text-3xl md:text-4xl font-bold">~/about</h2>
+                <span class="font-mono text-gray-600 text-sm">cat ./profile.md</span>
+            </div>
+
+            <div class="bg-white p-5 md:p-8 brutal-border brutal-card mb-8">
+                <div class="flex items-center gap-2 text-blue-700 font-bold mb-4 font-mono">
+                    <span>$ whoami</span>
+                </div>
+                <p class="text-base md:text-lg text-gray-800 leading-relaxed mb-4">
+                    I am <strong>Shayan Chakraborty</strong>, a postgraduate <strong>Forensic Science</strong> student focused on 
+                    <strong>Digital Forensics</strong>, <strong>Cybersecurity</strong>, and <strong>Cybercrime Investigation</strong>.
+                </p>
+                <p class="text-sm md:text-base text-gray-700 leading-relaxed mb-6">
+                    My work combines scientific forensic methodology with practical cybersecurity tools, digital evidence analysis, 
+                    vulnerability assessment, and security research. I approach digital artifacts through rigorous chain-of-custody 
+                    principles—ensuring evidence integrity, reproducible analysis, and defensible technical findings.
+                </p>
+
+                <!-- 3 Methodology Pillars -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t-2 border-dashed border-gray-300">
+                    <div class="p-4 bg-gray-100 border-2 border-black">
+                        <div class="font-bold text-sm mb-2 flex items-center gap-1.5 text-black">
+                            <span class="text-orange-600">01.</span> Chain of Custody &amp; Integrity
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Adherence to forensic standards, write-blocking procedures, cryptographic verification (MD5/SHA-256), and defensible artifact extraction.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-gray-100 border-2 border-black">
+                        <div class="font-bold text-sm mb-2 flex items-center gap-1.5 text-black">
+                            <span class="text-orange-600">02.</span> Threat &amp; Vuln Analysis
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Practical reconnaissance, socket-level port scanning, host configuration auditing, and network packet capture triage.
+                        </p>
+                    </div>
+                    <div class="p-4 bg-gray-100 border-2 border-black">
+                        <div class="font-bold text-sm mb-2 flex items-center gap-1.5 text-black">
+                            <span class="text-orange-600">03.</span> Applied Forensic Science
+                        </div>
+                        <p class="text-xs text-gray-600 leading-relaxed">
+                            Bridging classical forensic disciplines (crime scene triage, questioned documents) with next-generation digital investigation challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+             PROJECTS SECTION
+        ══════════════════════════════════════ -->
+        <section id="projects" class="mb-28 pt-8 fade-in">
+            <div class="flex items-baseline justify-between mb-8 border-b-2 border-black pb-4">
+                <h2 class="text-3xl md:text-4xl font-bold">~/projects</h2>
+                <span class="font-mono text-gray-600 text-sm">ls -la ./case-studies</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Project 01 — Vuln_hunter (Featured, 2-Col) -->
+                <div class="col-span-1 md:col-span-2 bg-white p-6 md:p-8 brutal-border brutal-card relative group">
+                    <div class="absolute top-4 right-4 bg-orange-100 border border-black px-2 py-1 text-xs font-bold text-orange-700 alert-pulse">
+                        FEATURED PROJECT
+                    </div>
+                    <div class="proj-icon">vuln</div>
+                    <h3 class="text-2xl font-bold mb-2 group-hover:underline decoration-2">Vuln_hunter — Vulnerability Assessment Tool</h3>
+                    <p class="text-gray-600 mb-4 text-sm md:text-base leading-relaxed">
+                        A cybersecurity utility developed in Python focused on automated target scanning, port and service discovery, and systematic vulnerability assessment.
+                    </p>
+                    <ul class="text-sm font-bold space-y-2 mb-4">
+                        <li><span class="text-green-600 font-bold">✓</span> Automated target service enumeration and open port discovery</li>
+                        <li><span class="text-green-600 font-bold">✓</span> Heuristic vulnerability identification across common service banners</li>
+                        <li><span class="text-green-600 font-bold">✓</span> Structured assessment output for security triage and remediation</li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-red text-xs px-2 py-1 font-bold">Python</span>
+                        <span class="tag-blue text-xs px-2 py-1 font-bold">Cybersecurity</span>
+                        <span class="tag-yellow text-xs px-2 py-1 font-bold">Vulnerability Assessment</span>
+                        <span class="tag-purple text-xs px-2 py-1 font-bold">Security Automation</span>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3">
+                        <button onclick="toggleDetail('detail-vulnhunter', this)" class="text-xs font-bold border border-black px-3 py-1.5 hover:bg-black hover:text-white transition brutal-btn" aria-expanded="false">
+                            [ + READ METHODOLOGY ]
+                        </button>
+                        <a href="https://github.com/Rexona-3112/Vuln_hunter" target="_blank" rel="noopener" class="text-xs font-bold bg-black text-white px-3 py-1.5 hover:bg-gray-800 transition brutal-btn">
+                            [ VIEW REPOSITORY ↗ ]
+                        </a>
+                    </div>
+
+                    <div id="detail-vulnhunter" class="project-detail">
+                        <div class="border-t-2 border-dashed border-gray-300 mt-4 pt-4 text-sm text-gray-700 space-y-2">
+                            <p><strong class="text-orange-600 font-bold">Approach:</strong> Designed to automate initial assessment phases. Implements targeted socket polling, banner inspection, and known risk mapping to reduce manual reconnaissance overhead.</p>
+                            <p><strong class="text-orange-600 font-bold">Repository:</strong> <code class="font-mono text-xs bg-gray-100 p-1 border">Rexona-3112/Vuln_hunter</code></p>
+                            <p><strong class="text-orange-600 font-bold">Status:</strong> Completed &amp; Documented.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02 — Password Checker -->
+                <div class="col-span-1 bg-yellow-50 p-6 md:p-8 brutal-border brutal-card group">
+                    <div class="proj-icon">auth</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">Password Checker</h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Security utility evaluating credential strength, complexity metrics, and common password vulnerability patterns.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-red text-xs px-2 py-1 font-bold">Python</span>
+                        <span class="tag-yellow text-xs px-2 py-1 font-bold">Password Security</span>
+                        <span class="tag-blue text-xs px-2 py-1 font-bold">Security Utility</span>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3">
+                        <button onclick="toggleDetail('detail-pwd', this)" class="text-xs font-bold border border-black px-3 py-1.5 hover:bg-black hover:text-white transition brutal-btn" aria-expanded="false">
+                            [ + READ METHODOLOGY ]
+                        </button>
+                        <a href="https://github.com/Rexona-3112/password-checker" target="_blank" rel="noopener" class="text-xs font-bold bg-black text-white px-3 py-1.5 hover:bg-gray-800 transition brutal-btn">
+                            [ REPO ↗ ]
+                        </a>
+                    </div>
+
+                    <div id="detail-pwd" class="project-detail">
+                        <div class="border-t-2 border-dashed border-gray-300 mt-3 pt-3 text-xs text-gray-700 space-y-2">
+                            <p><strong class="text-orange-600 font-bold">Approach:</strong> Implements algorithmic entropy scoring, dictionary pattern matching, and character variety rules to provide actionable security feedback.</p>
+                            <p><strong class="text-orange-600 font-bold">Repository:</strong> <code class="font-mono text-xs bg-white p-1 border">Rexona-3112/password-checker</code></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03 — Vulnerability-scan-my-pc -->
+                <div class="col-span-1 bg-blue-50 p-6 md:p-8 brutal-border brutal-card group">
+                    <div class="proj-icon">host</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">Host Vulnerability Scanner</h3>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                        Automated script verifying local host configuration, OS patch level awareness, and exposed services for personal PC defense.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-blue text-xs px-2 py-1 font-bold">Host Security</span>
+                        <span class="tag-red text-xs px-2 py-1 font-bold">Python</span>
+                        <span class="tag-green text-xs px-2 py-1 font-bold">Audit</span>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3">
+                        <button onclick="toggleDetail('detail-hostscan', this)" class="text-xs font-bold border border-black px-3 py-1.5 hover:bg-black hover:text-white transition brutal-btn" aria-expanded="false">
+                            [ + READ METHODOLOGY ]
+                        </button>
+                        <a href="https://github.com/Rexona-3112" target="_blank" rel="noopener" class="text-xs font-bold border border-black px-3 py-1.5 hover:bg-black hover:text-white transition brutal-btn">
+                            [ REPO ↗ ]
+                        </a>
+                    </div>
+
+                    <div id="detail-hostscan" class="project-detail">
+                        <div class="border-t-2 border-dashed border-gray-300 mt-3 pt-3 text-xs text-gray-700 space-y-2">
+                            <p><strong class="text-orange-600 font-bold">Approach:</strong> Audits listening sockets, background daemon permissions, and unquoted system paths on the local workstation.</p>
+                            <p><strong class="text-orange-600 font-bold">Repository:</strong> <code class="font-mono text-xs bg-white p-1 border">Vulnerability-scan-my-pc</code></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 04 — Windows Firewall Rule Auditor (2-Col) -->
+                <div class="col-span-1 md:col-span-2 bg-green-50 p-6 md:p-8 brutal-border brutal-card group">
+                    <div class="flex flex-col md:flex-row items-start gap-6">
+                        <div class="proj-icon">fw</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2 group-hover:underline">Windows Firewall Policy &amp; Inbound Inspector</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Script-driven inspection of active Windows Firewall rule sets. Scans for anomalous inbound allowances, permissive port allocations, and default security rule deviations.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tag-green text-xs px-2 py-1 font-bold">Network Defense</span>
+                                <span class="tag-blue text-xs px-2 py-1 font-bold">Windows Security</span>
+                                <span class="tag-yellow text-xs px-2 py-1 font-bold">Firewall Rules</span>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-3">
+                                <button onclick="toggleDetail('detail-firewall', this)" class="text-xs font-bold border border-black px-3 py-1.5 hover:bg-black hover:text-white transition brutal-btn" aria-expanded="false">
+                                    [ + READ METHODOLOGY ]
+                                </button>
+                                <a href="https://github.com/Rexona-3112" target="_blank" rel="noopener" class="text-xs font-bold bg-black text-white px-3 py-1.5 hover:bg-gray-800 transition brutal-btn">
+                                    [ REPO ↗ ]
+                                </a>
+                            </div>
+
+                            <div id="detail-firewall" class="project-detail">
+                                <div class="border-t-2 border-dashed border-gray-300 mt-3 pt-3 text-xs text-gray-700 space-y-2">
+                                    <p><strong class="text-orange-600 font-bold">Architecture:</strong> Evaluates active firewall profiles, verifies edge traversal settings, and exports flagged inbound rules to a structured triage log.</p>
+                                    <p><strong class="text-orange-600 font-bold">Repository:</strong> <code class="font-mono text-xs bg-white p-1 border">windows-firewall</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 05 — Port-scan-task -->
+                <div class="col-span-1 bg-purple-50 p-6 md:p-8 brutal-border brutal-card group">
+                    <div class="proj-icon">port</div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">Socket Port Scanner</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Multi-threaded network port scanner built with Python socket library to perform rapid TCP connect probing and service identification.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tag-purple text-xs px-2 py-1 font-bold">Python</span>
+                        <span class="tag-blue text-xs px-2 py-1 font-bold">Socket Programming</span>
+                        <span class="tag-yellow text-xs px-2 py-1 font-bold">Reconnaissance</span>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3">
+                        <button onclick="toggleDetail('detail-port', this)" class="text-xs font-bold border border-black px-3 py-1.5 hover:bg-black hover:text-white transition brutal-btn" aria-expanded="false">
+                            [ + READ METHODOLOGY ]
+                        </button>
+                        <a href="https://github.com/Rexona-3112" target="_blank" rel="noopener" class="text-xs font-bold border border-black px-3 py-1.5 hover:bg-black hover:text-white transition brutal-btn">
+                            [ REPO ↗ ]
+                        </a>
+                    </div>
+
+                    <div id="detail-port" class="project-detail">
+                        <div class="border-t-2 border-dashed border-gray-300 mt-3 pt-3 text-xs text-gray-700 space-y-2">
+                            <p><strong class="text-orange-600 font-bold">Approach:</strong> Custom socket timeout handling and port queue processing to map active services while managing connection states.</p>
+                            <p><strong class="text-orange-600 font-bold">Repository:</strong> <code class="font-mono text-xs bg-white p-1 border">port-scan-task</code></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 06 — Phishing Email & Wireshark PCAP Forensics (2-Col) -->
+                <div class="col-span-1 md:col-span-2 bg-white p-6 md:p-8 brutal-border brutal-card group">
+                    <div class="flex flex-col md:flex-row items-start gap-6">
+                        <div class="proj-icon">pcap</div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2 group-hover:underline">Phishing Email Analysis &amp; PCAP Traffic Forensics</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                Forensic investigation into malicious email artifacts and network traffic captures. Analyzes MIME header spoofing, SPF/DKIM authentication records, and dissects Wireshark PCAP streams for payload tracing.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="tag-blue text-xs px-2 py-1 font-bold">Wireshark</span>
+                                <span class="tag-red text-xs px-2 py-1 font-bold">Email Forensics</span>
+                                <span class="tag-purple text-xs px-2 py-1 font-bold">PCAP Analysis</span>
+                                <span class="tag-green text-xs px-2 py-1 font-bold">Artifact Extraction</span>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-3">
+                                <button onclick="toggleDetail('detail-pcap', this)" class="text-xs font-bold border border-black px-3 py-1.5 hover:bg-black hover:text-white transition brutal-btn" aria-expanded="false">
+                                    [ + READ METHODOLOGY ]
+                                </button>
+                                <a href="https://github.com/Rexona-3112" target="_blank" rel="noopener" class="text-xs font-bold bg-black text-white px-3 py-1.5 hover:bg-gray-800 transition brutal-btn">
+                                    [ REPO ↗ ]
+                                </a>
+                            </div>
+
+                            <div id="detail-pcap" class="project-detail">
+                                <div class="border-t-2 border-dashed border-gray-300 mt-3 pt-3 text-xs text-gray-700 space-y-2">
+                                    <p><strong class="text-orange-600 font-bold">Methodology:</strong> Reconstructs SMTP communication headers, correlates sender IP authenticity via reverse DNS and SPF/DKIM verification, and inspects raw packet streams in Wireshark for anomalous TCP/UDP payloads.</p>
+                                    <p><strong class="text-orange-600 font-bold">Repositories:</strong> <code class="font-mono text-xs bg-gray-100 p-1 border">phishing-email</code> · <code class="font-mono text-xs bg-gray-100 p-1 border">wireshsrk_scan-results</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div id="detail-steg" class="project-detail">
+                        <div class="border-t-2 border-dashed border-gray-300 mt-3 pt-3 text-xs text-gray-700 space-y-2">
+                            <p><strong class="text-orange-600 font-bold">Approach:</strong> Explores bit manipulation within image pixel matrices, examining file structural integrity and statistical artifact presence.</p>
+                            <p><strong class="text-orange-600 font-bold">Repository:</strong> <code class="font-mono text-xs bg-white p-1 border">Hidden-file-message</code></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- View All Projects Button -->
+            <div class="mt-8 text-center">
+                <a href="https://github.com/Rexona-3112" target="_blank" rel="noopener" class="inline-block bg-black text-white px-8 py-4 font-bold brutal-border brutal-btn hover:bg-gray-800 transition text-sm md:text-base">
+                    [ VIEW ALL GITHUB PROJECTS (Rexona-3112) → ]
+                </a>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+             EXPERIENCE / INTERNSHIP SECTION
+        ══════════════════════════════════════ -->
+        <section id="experience" class="mb-28 pt-8 fade-in">
+            <div class="flex items-baseline justify-between mb-8 border-b-2 border-black pb-4">
+                <h2 class="text-3xl md:text-4xl font-bold">~/experience</h2>
+                <span class="font-mono text-gray-600 text-sm">git log --oneline</span>
+            </div>
+
+            <div class="space-y-6">
+
+                <!-- State Forensic Science Laboratory (SFSL), West Bengal -->
+                <div class="bg-white p-6 md:p-8 brutal-border brutal-card">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-6 pb-4 border-b-2 border-dashed border-gray-300">
+                        <div>
+                            <span class="bg-orange-200 border-2 border-black text-xs px-2 py-0.5 font-bold text-black mb-1 inline-block">
+                                2026 SCHEDULED INTERNSHIP
+                            </span>
+                            <h3 class="text-xl md:text-2xl font-bold">
+                                STATE FORENSIC SCIENCE LABORATORY
+                            </h3>
+                            <p class="text-gray-700 font-bold text-sm mt-0.5">WEST BENGAL · CYBER DIVISION</p>
+                        </div>
+                        <span class="font-mono text-xs bg-blue-100 border border-black px-3 py-1 self-start whitespace-nowrap font-bold">
+                            June 2026 — July 2026
+                        </span>
+                    </div>
+
+                    <!-- Internship Details -->
+                    <div class="space-y-3 text-sm text-gray-800 leading-relaxed">
+                        <p class="font-bold text-black">
+                            Cyber Division Internship — Digital Forensics &amp; Cybercrime Investigation Workflow Exposure:
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-500 font-bold">▹</span>
+                                <span><strong>Digital Evidence Acquisition:</strong> Laboratory exposure to forensically sound data acquisition, bit-stream disk imaging, and write-blocking methodologies.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-500 font-bold">▹</span>
+                                <span><strong>Chain of Custody Protocol:</strong> Practical understanding of evidence integrity documentation, cryptographic hash verification (MD5/SHA-256), and formal case intake handling.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-500 font-bold">▹</span>
+                                <span><strong>Cybercrime Investigation Methodology:</strong> Structured triage of digital crime scenes, forensic analysis of file systems and operating system artifacts, and reporting standards.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-orange-500 font-bold">▹</span>
+                                <span><strong>Forensic Laboratory Workflows:</strong> Exposure to standard operating procedures (SOPs) governing government forensic science laboratories in cyber division cases.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Academic Forensic Science Practical Training -->
+                <div class="bg-white p-6 md:p-8 brutal-border brutal-card">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4 pb-3 border-b-2 border-dashed border-gray-300">
+                        <div>
+                            <h3 class="text-xl font-bold">Postgraduate Forensic Science Laboratory Practice</h3>
+                            <p class="text-gray-600 font-bold text-sm mt-1">Forensic Science Institute / University Laboratory</p>
+                        </div>
+                        <span class="font-mono text-xs bg-gray-100 border border-black px-3 py-1 self-start whitespace-nowrap">
+                            Academic Curriculum
+                        </span>
+                    </div>
+                    <ul class="text-sm text-gray-700 space-y-1.5 leading-relaxed">
+                        <li>▹ Applied training across crime scene management, physical evidence preservation, fingerprint examination, and questioned documents.</li>
+                        <li>▹ Integration of digital evidence concepts with classical forensic disciplines, evidentiary legal requirements, and scientific reporting.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+             RESEARCH & PUBLICATIONS SECTION
+        ══════════════════════════════════════ -->
+        <section id="research" class="mb-28 pt-8 fade-in">
+            <div class="flex items-baseline justify-between mb-8 border-b-2 border-black pb-4">
+                <h2 class="text-3xl md:text-4xl font-bold">~/research</h2>
+                <span class="font-mono text-gray-600 text-sm">cat ./publications.bib</span>
+            </div>
+
+            <!-- Featured Research Card: PhotoDNA & Image Manipulation Detection -->
+            <div class="bg-black text-white p-6 md:p-8 brutal-border mb-8 group">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                    <span class="bg-orange-500 text-black px-3 py-1 text-xs font-bold border-2 border-orange-500">
+                        ● FEATURED RESEARCH INQUIRY
+                    </span>
+                    <span class="bg-gray-800 text-gray-300 px-3 py-1 text-xs font-mono border border-gray-700">
+                        Digital Image Forensics
+                    </span>
+                </div>
+
+                <h3 class="text-2xl md:text-3xl font-bold mb-3 group-hover:text-orange-400 transition">
+                    PhotoDNA — Detection of Manipulation in Photos
+                </h3>
+
+                <p class="text-gray-300 text-sm md:text-base mb-4 leading-relaxed">
+                    A comprehensive research inquiry investigating digital photograph authenticity, altered visual media detection, and the forensic examination of digital photographs.
+                </p>
+
+                <!-- Crucial Technical Distinction Note -->
+                <div class="bg-gray-900 border-l-4 border-orange-500 p-4 mb-4 text-xs md:text-sm text-gray-300 font-mono space-y-2">
+                    <p class="text-orange-400 font-bold">// CRITICAL FORENSIC DISTINCTION:</p>
+                    <p>
+                        PhotoDNA is a recognized <strong>perceptual image hashing / robust matching technology</strong> designed to identify known illicit imagery, rather than a standalone pixel-level manipulation detector.
+                    </p>
+                    <p>
+                        This research evaluates both the utility of perceptual hashing frameworks (such as PhotoDNA) and passive image tampering detection techniques—including <em>Error Level Analysis (ELA)</em>, <em>copy-move clone detection</em>, <em>Color Filter Array (CFA) interpolation artifacts</em>, and <em>noise variance analysis</em>—within end-to-end digital forensic verification pipelines.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 text-xs font-mono">
+                    <span class="bg-gray-800 border border-gray-700 px-2.5 py-1 text-gray-300">Perceptual Hashing</span>
+                    <span class="bg-gray-800 border border-gray-700 px-2.5 py-1 text-gray-300">Error Level Analysis</span>
+                    <span class="bg-gray-800 border border-gray-700 px-2.5 py-1 text-gray-300">Photo Manipulation</span>
+                    <span class="bg-gray-800 border border-gray-700 px-2.5 py-1 text-gray-300">Digital Authenticity</span>
+                </div>
+            </div>
+
+            <!-- Other Research Topics & Academic Works Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Card 1 -->
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-purple text-xs px-2 py-1 font-bold mb-3 inline-block">Research Review</span>
+                    <h3 class="text-lg font-bold mb-2 leading-snug">
+                        Next-Gen Digital Forensics: Investigating Cybercrime in the Era of AI, Blockchain, and the Dark Web
+                    </h3>
+                    <p class="text-gray-600 text-xs leading-relaxed">
+                        Exploratory study analyzing emerging forensic hurdles: generative AI evidence tampering, distributed ledger transaction tracking, and decentralized dark web anonymity protocols.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-blue text-xs px-2 py-1 font-bold mb-3 inline-block">Technical Review</span>
+                    <h3 class="text-lg font-bold mb-2 leading-snug">
+                        Scanning the Risks: A Review of QR Code Phishing Techniques and Protective Measures
+                    </h3>
+                    <p class="text-gray-600 text-xs leading-relaxed">
+                        Examination of Quishing (QR code phishing) attack vectors, malicious URL redirection encoding, user perception vulnerabilities, and technical countermeasures.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-yellow text-xs px-2 py-1 font-bold mb-3 inline-block">Forensics Review</span>
+                    <h3 class="text-lg font-bold mb-2 leading-snug">
+                        From Devices to Data: A Review of the Core Challenges in IoT Forensics
+                    </h3>
+                    <p class="text-gray-600 text-xs leading-relaxed">
+                        Survey of Internet of Things (IoT) forensic evidence acquisition: hardware flash extraction, volatile memory triage, heterogeneous protocols, and cloud sync correlation.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-green text-xs px-2 py-1 font-bold mb-3 inline-block">Forensic Science Study</span>
+                    <h3 class="text-lg font-bold mb-2 leading-snug">
+                        Advances in Latent Fingerprint Development Techniques in Forensic Science
+                    </h3>
+                    <p class="text-gray-600 text-xs leading-relaxed">
+                        Investigation of modern chemical and optical reagents for developing latent friction ridge impressions on challenging porous and non-porous evidentiary surfaces.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-red text-xs px-2 py-1 font-bold mb-3 inline-block">Conference Presentation</span>
+                    <h3 class="text-lg font-bold mb-2 leading-snug">
+                        Brain Fingerprinting: P300 Wave &amp; EEG Analysis in Forensic Investigation
+                    </h3>
+                    <p class="text-gray-600 text-xs leading-relaxed">
+                        Presented academic study on Electroencephalography (EEG)-based memory and encoding related event potentials (P300 response) for investigating concealed knowledge.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-orange text-xs px-2 py-1 font-bold mb-3 inline-block">Academic Inquiry</span>
+                    <h3 class="text-lg font-bold mb-2 leading-snug">
+                        Proteomic Body Fluid Identification &amp; ProteoMarkers
+                    </h3>
+                    <p class="text-gray-600 text-xs leading-relaxed">
+                        Review of mass-spectrometry proteomic markers for reliable confirmatory identification of biological stains in forensic casework.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+             SKILLS SECTION
+        ══════════════════════════════════════ -->
+        <section id="skills" class="mb-28 fade-in">
+            <div class="flex items-baseline justify-between mb-8 border-b-2 border-black pb-4">
+                <h2 class="text-3xl md:text-4xl font-bold">~/skills</h2>
+                <span class="font-mono text-gray-600 text-sm">ls -R ~/skills</span>
+            </div>
+
+            <div class="bg-gray-900 rounded-lg brutal-border overflow-hidden shadow-2xl scanlines">
+                <div class="bg-gray-800 p-3 flex items-center gap-2 border-b border-gray-700">
+                    <div class="terminal-dot bg-red-mac"></div>
+                    <div class="terminal-dot bg-yellow-mac"></div>
+                    <div class="terminal-dot bg-green-mac"></div>
+                    <span class="ml-3 text-gray-400 text-xs font-mono">shayan@forensic-lab: ~/skills</span>
+                </div>
+                <div class="p-6 md:p-8 font-mono text-xs md:text-sm leading-relaxed">
+                    
+                    <!-- Digital Forensics -->
+                    <div class="mb-6">
+                        <p class="text-blue-400 font-bold mb-1">
+                            shayan@forensic-lab:~$ ls <span class="text-orange-400">digital-forensics/</span>
+                            <span class="text-gray-500 text-[10px] ml-2">[PRACTICAL EXPERIENCE]</span>
+                        </p>
+                        <div class="skill-grid text-green-400 mt-2">
+                            <span class="skill-item">FTK Imager</span>
+                            <span class="skill-item">Digital Evidence Preservation</span>
+                            <span class="skill-item">Chain of Custody Protocol</span>
+                            <span class="skill-item">Bit-Stream Disk Imaging</span>
+                            <span class="skill-item">Artifact Analysis</span>
+                            <span class="skill-item">Cryptographic Hashing (MD5/SHA)</span>
+                            <span class="skill-item">File Integrity Verification</span>
+                            <span class="skill-item">Hex &amp; File Header Inspection</span>
+                        </div>
+                    </div>
+
+                    <!-- Cybersecurity -->
+                    <div class="mb-6">
+                        <p class="text-blue-400 font-bold mb-1">
+                            shayan@forensic-lab:~$ ls <span class="text-orange-400">cybersecurity/</span>
+                            <span class="text-gray-500 text-[10px] ml-2">[WORKING KNOWLEDGE]</span>
+                        </p>
+                        <div class="skill-grid text-green-400 mt-2">
+                            <span class="skill-item">Nmap</span>
+                            <span class="skill-item">Wireshark</span>
+                            <span class="skill-item">Burp Suite</span>
+                            <span class="skill-item">OWASP ZAP</span>
+                            <span class="skill-item">SQLMap</span>
+                            <span class="skill-item">Nessus</span>
+                            <span class="skill-item">Vulnerability Assessment</span>
+                            <span class="skill-item">Network Traffic Triage</span>
+                        </div>
+                    </div>
+
+                    <!-- Forensic Science -->
+                    <div class="mb-6">
+                        <p class="text-blue-400 font-bold mb-1">
+                            shayan@forensic-lab:~$ ls <span class="text-orange-400">forensic-science/</span>
+                            <span class="text-gray-500 text-[10px] ml-2">[POSTGRADUATE TRAINING]</span>
+                        </p>
+                        <div class="skill-grid text-green-400 mt-2">
+                            <span class="skill-item">Digital Evidence Handling</span>
+                            <span class="skill-item">Crime Scene Management</span>
+                            <span class="skill-item">Fingerprint Analysis</span>
+                            <span class="skill-item">Forensic Biology</span>
+                            <span class="skill-item">DNA Analysis</span>
+                            <span class="skill-item">Forensic Toxicology</span>
+                            <span class="skill-item">Questioned Documents</span>
+                            <span class="skill-item">Evidentiary Documentation</span>
+                        </div>
+                    </div>
+
+                    <!-- Programming & Technical -->
+                    <div>
+                        <p class="text-blue-400 font-bold mb-1">
+                            shayan@forensic-lab:~$ ls <span class="text-orange-400">programming-tools/</span>
+                            <span class="text-gray-500 text-[10px] ml-2">[SCRIPTING &amp; LAB]</span>
+                        </p>
+                        <div class="skill-grid text-green-400 mt-2">
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">C</span>
+                            <span class="skill-item">C++</span>
+                            <span class="skill-item">Java</span>
+                            <span class="skill-item">MySQL</span>
+                            <span class="skill-item">Linux / Bash</span>
+                            <span class="skill-item">Git</span>
+                            <span class="skill-item">GitHub</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+             CERTIFICATIONS & ACHIEVEMENTS SECTION
+        ══════════════════════════════════════ -->
+        <section id="certifications" class="mb-28 pt-8 fade-in">
+            <div class="flex items-baseline justify-between mb-8 border-b-2 border-black pb-4">
+                <h2 class="text-3xl md:text-4xl font-bold">~/certifications</h2>
+                <span class="font-mono text-gray-600 text-sm">cat ./credentials.log</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-red text-xs px-2 py-1 font-bold mb-2 inline-block">Security Certification</span>
+                    <h3 class="text-base font-bold mb-1">OPSWAT File Security Associate</h3>
+                    <p class="text-xs text-gray-600">OPSWAT Academy · Secure data workflow &amp; file security controls.</p>
+                </div>
+
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-blue text-xs px-2 py-1 font-bold mb-2 inline-block">Networking / Security</span>
+                    <h3 class="text-base font-bold mb-1">Cyber Threat Management</h3>
+                    <p class="text-xs text-gray-600">Cisco Networking Academy / NSDC · Threat intelligence &amp; defense.</p>
+                </div>
+
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-yellow text-xs px-2 py-1 font-bold mb-2 inline-block">Corporate Simulation</span>
+                    <h3 class="text-base font-bold mb-1">Siemens Commercial Project Manager</h3>
+                    <p class="text-xs text-gray-600">Forage Simulation · Risk assessment and project management workflows.</p>
+                </div>
+
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-green text-xs px-2 py-1 font-bold mb-2 inline-block">Operations Simulation</span>
+                    <h3 class="text-base font-bold mb-1">Goldman Sachs Operations Simulation</h3>
+                    <p class="text-xs text-gray-600">Forage Simulation · Operational risk mitigation and compliance.</p>
+                </div>
+
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-purple text-xs px-2 py-1 font-bold mb-2 inline-block">Audit Simulation</span>
+                    <h3 class="text-base font-bold mb-1">Goldman Sachs Internal Audit Simulation</h3>
+                    <p class="text-xs text-gray-600">Forage Simulation · Internal controls, audit trails, and risk evaluation.</p>
+                </div>
+
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-orange text-xs px-2 py-1 font-bold mb-2 inline-block">GRC Simulation</span>
+                    <h3 class="text-base font-bold mb-1">Junior GRC Analyst Simulation</h3>
+                    <p class="text-xs text-gray-600">Vibe Security / Siemens Forage · Governance, risk, and compliance.</p>
+                </div>
+
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-blue text-xs px-2 py-1 font-bold mb-2 inline-block">Fundamentals</span>
+                    <h3 class="text-base font-bold mb-1">Networking Basics</h3>
+                    <p class="text-xs text-gray-600">Foundational network architecture, TCP/IP, and routing protocols.</p>
+                </div>
+
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-green text-xs px-2 py-1 font-bold mb-2 inline-block">Conference</span>
+                    <h3 class="text-base font-bold mb-1">IASR Conference Participation</h3>
+                    <p class="text-xs text-gray-600">International Association of Scientists &amp; Researchers Forensic Science Conference.</p>
+                </div>
+
+                <div class="bg-white p-6 brutal-border brutal-card">
+                    <span class="tag-red text-xs px-2 py-1 font-bold mb-2 inline-block">Academic Presentation</span>
+                    <h3 class="text-base font-bold mb-1">Brain Fingerprinting Presentation</h3>
+                    <p class="text-xs text-gray-600">Delivered technical session on P300 wave and cognitive forensic investigation.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+             CONTACT SECTION
+        ══════════════════════════════════════ -->
+        <section id="contact" class="mb-28 pt-8 fade-in">
+            <div class="bg-white p-6 md:p-10 brutal-border brutal-card">
+                <div class="flex items-center gap-2 text-orange-600 font-bold font-mono mb-2">
+                    <span>$ ./connect.sh</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                    Interested in digital forensics,<br>
+                    cybersecurity &amp; forensic investigation?
+                </h2>
+                <p class="text-gray-700 text-base md:text-lg mb-8 max-w-3xl">
+                    Whether you are discussing forensic research, cybercrime investigation methodology, 
+                    internship opportunities, or security tools—let's connect.
+                </p>
+
+                <!-- Contact Action Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <a href="https://github.com/Rexona-3112" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white p-4 font-bold text-center brutal-border brutal-btn hover:bg-gray-800 transition" aria-label="Open GitHub in new tab">
+                        [ GITHUB ↗ ]
+                    </a>
+                    <a href="https://www.linkedin.com/in/shayan-chakraborty" target="_blank" rel="noopener noreferrer" class="bg-black text-white p-4 font-bold text-center brutal-border brutal-btn hover:bg-blue-700 transition" aria-label="Open LinkedIn in new tab">
+                        [ LINKEDIN ↗ ]
+                    </a>
+                    <a href="mailto:Shayanchakraborty87@gmail.com" class="bg-yellow-400 text-black p-4 font-bold text-center brutal-border brutal-btn hover:bg-yellow-300 transition" aria-label="Open email client">
+                        [ EMAIL ✉ ]
+                    </a>
+                    <a href="assets/Shayan-Chakraborty-Resume.pdf" target="_blank" rel="noopener noreferrer" class="bg-white text-black p-4 font-bold text-center border-2 border-black brutal-border brutal-btn hover:bg-gray-100 transition" aria-label="Open Shayan Chakraborty's Resume in a new tab">
+                        [ VIEW RESUME ↗ ]
+                    </a>
+                </div>
+                <div class="mt-4 flex flex-wrap items-center justify-end gap-3 text-xs font-mono">
+                    <span class="text-gray-500">// Direct file download:</span>
+                    <a href="assets/Shayan-Chakraborty-Resume.pdf" download="Shayan-Chakraborty-Resume.pdf" class="text-black font-bold underline decoration-2 decoration-orange-500 hover:text-orange-600 transition" aria-label="Download Shayan Chakraborty's Resume PDF">
+                        [ DOWNLOAD RESUME PDF ↓ ]
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ══════════════════════════════════════
+         FOOTER
+    ══════════════════════════════════════ -->
+    <footer class="border-t-4 border-black pt-16 pb-12 -mx-4 md:-mx-8 px-8 bg-black text-white fade-in">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <div class="inline-flex items-center gap-2 bg-green-900 border border-green-500 text-green-400 px-3 py-1 text-xs font-bold mb-4">
+                        <span class="relative inline-block w-2 h-2 rounded-full bg-green-400 ping-dot"></span>
+                        POSTGRADUATE FORENSIC SCIENCE
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
+                        Evidence First.<br>Integrity Always.
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-md">
+                        Applying scientific principles to digital artifacts, vulnerability research, and cybercrime investigation.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <a href="mailto:Shayanchakraborty87@gmail.com" class="flex items-center justify-between bg-yellow-400 text-black px-6 py-4 font-bold border-2 border-yellow-400 hover:bg-yellow-300 transition group">
+                        <span>Shayanchakraborty87@gmail.com</span>
+                        <span class="group-hover:translate-x-1 transition-transform" aria-label="Open email client">→</span>
+                    </a>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/Rexona-3112" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-3 border-2 border-gray-600 text-gray-400 font-bold text-sm hover:bg-gray-800 transition" aria-label="Open GitHub in new tab">
+                            GitHub ↗
+                        </a>
+                        <a href="https://www.linkedin.com/in/shayan-chakraborty" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-3 border-2 border-gray-600 text-gray-400 font-bold text-sm hover:bg-gray-800 transition" aria-label="Open LinkedIn in new tab">
+                            LinkedIn ↗
+                        </a>
+                        <a href="assets/Shayan-Chakraborty-Resume.pdf" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-3 border-2 border-gray-600 text-gray-400 font-bold text-sm hover:bg-gray-800 transition" aria-label="Open Resume in new tab">
+                            Resume ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-gray-500">
+                <span>$ exit // © 2026 Shayan Chakraborty. All rights reserved.</span>
+                <span>Built with curiosity, evidence &amp; code. <span class="text-green-400">// Case Closed.</span></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Client-Side Script -->
+    <script src="script.js"></script>
+</body>
+</html>
